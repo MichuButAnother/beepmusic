@@ -17,4 +17,4 @@ make
 Result file will appear in the same directory as project.
 
 For now i not planning make Windows port.
-If your terminal not support color, change line `set(beepmusic_NOGRAPHICS 0)` to `set(beepmusic_NOGRAPHICS 1)`
+If your terminal not support color, change line `set(beepmusic_NOGRAPHICS 0)` to `set(beepmusic_NOGRAPHICS 1)` to avoid garbage.
