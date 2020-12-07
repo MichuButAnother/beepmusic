@@ -1,0 +1,3 @@
+#define beepmusic_VERSION_MAJOR @beepmusic_VERSION_MAJOR@
+#define beepmusic_VERSION_MINOR @beepmusic_VERSION_MINOR@
+#define beepmusic_nographics @beepmusic_NOGRAPHICS@
