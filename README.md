@@ -5,6 +5,8 @@ beepmusic [file] [tempo]
 
 Example of file is show in /examples.
 Tempo is delay before next note (lower=faster). For first time i recommend 50.
+
+NOT WORKING IN TERMINAL EMULATOR! Switch to console mode before using it! also check your pc speaker (onboard) is connected if there still no sounds.
 # Making music
 Select in OpenMPT channel and copy it to new .txt file.
 If you have problems try look at examples.
