@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
     if(argc>3) {cout<<"To many arguments!"<<endl; exit(0);}
 
     signal(SIGINT,exit_handle);
-     int tempo=atoi(argv[2]);
+    int16_t tempo=atoi(argv[2]);
     ifstream input(argv[1],ios::binary);
     if(!input.good()) {
     cout<<"Failed to open file input.txt!"<<endl;
@@ -83,7 +83,7 @@ int main(int argc, char *argv[])
     if(line=="ModPlug Tracker  IT" || line=="ModPlug Tracker MPT") {} else {cout<<"Invalid format"<<endl; exit(0);}
 
     int cnt=-1;
-    bool innote=false;
+    bool innote=0;
 
     while(1) {
     if(!getline(input,line)) break;
@@ -93,7 +93,7 @@ int main(int argc, char *argv[])
     try {p=line.substr(3,1);} catch(std::out_of_range & e) {}
     if(t=="p") break;
 
-    int g=0;
+    int16_t g=0;
     if(t=="C-") g=1;
     if(t=="C#") g=2;
     if(t=="D-") g=3;
@@ -107,7 +107,7 @@ int main(int argc, char *argv[])
     if(t=="A#") g=11;
     if(t=="B-") g=12;
 
-    int a=1;
+    int16_t a=1;
     if(p=="1") a=2;
     if(p=="2") a=3;
     if(p=="3") a=4;
@@ -121,7 +121,7 @@ int main(int argc, char *argv[])
     } else {
 
     if(!(p==".")) {
-    int freq_index=(a*12)+g;
+    int16_t freq_index=(a*12)+g;
     innote=true;
     if(a==0) innote=false;
     if(g==0) {beep(0);} else {
